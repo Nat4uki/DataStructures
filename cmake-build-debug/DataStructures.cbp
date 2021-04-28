@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="G:/Work/Code/DataStructures/array.h">
+			<Option target="DataStructures"/>
+		</Unit>
 		<Unit filename="G:/Work/Code/DataStructures/sorting.c">
 			<Option target="DataStructures"/>
 		</Unit>

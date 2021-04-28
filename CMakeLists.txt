@@ -3,4 +3,4 @@ project(DataStructures)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(DataStructures sorting.c)
+add_executable(DataStructures sorting.c array.h)
