@@ -12,7 +12,7 @@
 void printArray(int *a, int arraySize) {
     printf("The arraySize of array = %d\n", arraySize);
     for (int i = 0; i < arraySize; i++) {
-        printf("%d ", a[i]);
+        printf("%d,", a[i]);
     }
     printf("\n");
 }
