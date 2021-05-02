@@ -72,3 +72,26 @@ void insertionSort(int *a,int arraySize){
     }
     return;
 }
+
+int partition(int a[], int i, int j) {
+    int p = a[i]; // P是枢纽
+    int m = i; // S1和S2一开始是空的
+    for (int k = i + 1; k <= j; k++) { // 探索其他区域
+        if (a[k] < p) { // case 2
+            m++;
+            swap(&a[k], &a[m]);
+        } //主义：在情况1的时候我们设么都不做：a[k] >= p
+    }
+    swap(&a[i], &a[m]); //  最后一步，用a[m]交换枢纽
+    return m; // 返回枢纽的指数，用于快速排序
+}
+
+void quickSort(int *a, int low, int high) {
+    if (low < high) {
+        int m = partition(a, low, high); // O(N)
+        // a[low..high] ~> a[low..m–1], pivot, a[m+1..high]
+        quickSort(a, low, m - 1); // 递归地将左子阵列排序
+        // a[m] = pivot 在分区后就被排序好了
+        quickSort(a, m + 1, high); // 然后将右子阵列排序
+    }
+}
